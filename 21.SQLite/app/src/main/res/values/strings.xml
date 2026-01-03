@@ -1,0 +1,21 @@
+
+<resources>
+    <string name="app_name">Student App</string>
+    <string name="add_student">Add Student</string>
+    <string name="edit_student">Edit Student</string>
+    <string name="delete_student">Delete Student</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="age">Age</string>
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit">Edit</string>
+    <string name="no_students">No students found</string>
+    <string name="student_added">Student added successfully</string>
+    <string name="student_updated">Student updated successfully</string>
+    <string name="student_deleted">Student deleted successfully</string>
+    <string name="fill_all_fields">Please fill all fields</string>
+    <string name="delete_confirmation">Are you sure you want to delete this student?</string>
+</resources>
