@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Wrap_contentFill_parentPasswordFieldAndToastInAndroid" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Wrap_contentFill_parentPasswordFieldAndToastInAndroid" parent="Base.Theme.Wrap_contentFill_parentPasswordFieldAndToastInAndroid" />
+</resources>
