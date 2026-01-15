@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._30Firebase_I">
         <activity
+            android:name=".StartActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegistryActivity"
             android:exported="false" />
         <activity

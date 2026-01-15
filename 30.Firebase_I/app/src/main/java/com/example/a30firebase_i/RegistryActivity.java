@@ -23,15 +23,13 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class RegistryActivity extends AppCompatActivity {
     private Button regiButton;
-    private EditText fName,lname,email,password;
+    private EditText email,password;
     private FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registry);
         regiButton= findViewById(R.id.btnRegister);
-        fName =findViewById(R.id.etFirstName);
-        lname=findViewById(R.id.etFirstName);
         email =findViewById(R.id.etEmail);
         password =findViewById(R.id.etPassword);
         auth =FirebaseAuth.getInstance();
@@ -39,19 +37,17 @@ public class RegistryActivity extends AppCompatActivity {
         regiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String f_name = fName.getText().toString();
-                String l_name = lname.getText().toString();
                 String _password = password.getText().toString();
                 String _email = email.getText().toString();
-                if (TextUtils.isEmpty(f_name)||TextUtils.isEmpty(l_name)||TextUtils.isEmpty(_email)||TextUtils.isEmpty(_password)){
+                if (TextUtils.isEmpty(_email)||TextUtils.isEmpty(_password)){
                     Toast.makeText(RegistryActivity.this, "Empty Credentioal", Toast.LENGTH_SHORT).show();
                 }else if(_password.length() <6){
                     Toast.makeText(RegistryActivity.this, "Password too short", Toast.LENGTH_SHORT).show();
                 }else{
-                    registerUser(f_name,l_name,_email,_password);
+                    registerUser(_email,_password);
                 }
             }
-            private void registerUser(String fName, String lName, String email, String password) {
+            private void registerUser( String email, String password) {
                 auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(RegistryActivity.this,
                         new OnCompleteListener<AuthResult>() {
                     @Override

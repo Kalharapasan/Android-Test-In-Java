@@ -12,49 +12,19 @@
         android:text="User Registration"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
 
-    <!-- First Name -->
-    <TextView
-        android:id="@+id/lblFirstName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="First Name"
-        android:layout_below="@id/title"
-        android:layout_marginTop="20dp"/>
-
-    <EditText
-        android:id="@+id/etFirstName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter First Name"
-        android:layout_below="@id/lblFirstName"/>
-
-    <!-- Last Name -->
-    <TextView
-        android:id="@+id/lblLastName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Last Name"
-        android:layout_below="@id/etFirstName"
-        android:layout_marginTop="10dp"/>
-
-    <EditText
-        android:id="@+id/etLastName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Last Name"
-        android:layout_below="@id/lblLastName"/>
-
-    <!-- Email -->
+    <!-- Email Label -->
     <TextView
         android:id="@+id/lblEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email"
-        android:layout_below="@id/etLastName"
-        android:layout_marginTop="10dp"/>
+        android:layout_below="@id/title"
+        android:layout_marginTop="20dp"/>
 
+    <!-- Email Input -->
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
@@ -63,15 +33,16 @@
         android:inputType="textEmailAddress"
         android:layout_below="@id/lblEmail"/>
 
-    <!-- Password -->
+    <!-- Password Label -->
     <TextView
         android:id="@+id/lblPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password"
         android:layout_below="@id/etEmail"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="16dp"/>
 
+    <!-- Password Input -->
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
@@ -87,6 +58,6 @@
         android:layout_height="wrap_content"
         android:text="Register"
         android:layout_below="@id/etPassword"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="24dp"/>
 
 </RelativeLayout>
