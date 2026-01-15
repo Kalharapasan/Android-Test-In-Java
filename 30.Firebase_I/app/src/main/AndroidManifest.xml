@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._30Firebase_I">
         <activity
+            android:name=".RegistryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
