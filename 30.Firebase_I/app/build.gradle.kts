@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.a29action_bar_ii"
+    namespace = "com.example.a30firebase_i"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.a29action_bar_ii"
+        applicationId = "com.example.a30firebase_i"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -33,6 +33,7 @@ android {
 
 dependencies {
 
+    implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)

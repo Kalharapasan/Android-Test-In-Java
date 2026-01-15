@@ -1,9 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Base.Theme._28ActionBar"
-        parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Base.Theme._29Action_Bar_II" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize colors if needed -->
     </style>
 
-    <style name="Theme._28ActionBar" parent="Base.Theme._28ActionBar" />
-
+    <style name="Theme._29Action_Bar_II" parent="Base.Theme._29Action_Bar_II"/>
 </resources>
