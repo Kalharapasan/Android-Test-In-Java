@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
                 );
             }
         }
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
                     CHANNEL_ID,
@@ -52,9 +51,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(MainActivity.this, MainActivity.class);
-
                 PendingIntent pendingIntent = PendingIntent.getActivity(
                         MainActivity.this,
                         0,
@@ -62,27 +59,32 @@ public class MainActivity extends AppCompatActivity {
                         PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
                 );
                 Notification notification;
+
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     notification = new Notification.Builder(MainActivity.this, CHANNEL_ID)
-                            .setSmallIcon(R.drawable.ic_launcher_background)
-                            .setContentTitle("Content Title")
+                            .setTicker("TickerTitle")
+                            .setContentTitle("Content title")
                             .setContentText("Hi I'm Kalhara")
+                            .addAction(R.drawable.ic_launcher_background, "Action 1", pendingIntent)
+                            .addAction(R.drawable.ic_launcher_background, "Action 2", pendingIntent)
+                            .setSmallIcon(R.drawable.ic_launcher_background)
                             .setContentIntent(pendingIntent)
                             .setAutoCancel(true)
                             .build();
                 } else {
                     notification = new Notification.Builder(MainActivity.this)
-                            .setSmallIcon(R.drawable.ic_launcher_background)
-                            .setContentTitle("Content Title")
+                            .setTicker("TickerTitle")
+                            .setContentTitle("Content title")
                             .setContentText("Hi I'm Kalhara")
+                            .addAction(R.drawable.ic_launcher_background, "Action 1", pendingIntent)
+                            .addAction(R.drawable.ic_launcher_background, "Action 2", pendingIntent)
+                            .setSmallIcon(R.drawable.ic_launcher_background)
                             .setContentIntent(pendingIntent)
                             .setAutoCancel(true)
                             .build();
                 }
-
                 NotificationManager notificationManager =
                         (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-
                 notificationManager.notify(1, notification);
             }
         });
